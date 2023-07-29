@@ -1,0 +1,13 @@
+[package]
+name = "bytes_convert"
+version = "1.0.0"
+edition = "2021"
+authors = ["Andrew Korovkin <positiveway05@gmail.com>"]
+
+description = "Easily encode and decode bytes to send data over network"
+keywords = ["byte", "bytes", "convert", "encode", "decode"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+bytes = "1.4.0"
