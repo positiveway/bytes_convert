@@ -146,3 +146,9 @@ pub fn from_bytes<T: FromBytes<T>, S: AsRef<[u8]>>(buf: S) -> Vec<T> {
     }
     values
 }
+
+pub fn first_value_from_bytes<T: FromBytes<T>, S: AsRef<[u8]>>(buf: S) -> T {
+    let mut buf = BytesMut::from(buf.as_ref());
+    let converted = T::from_bytes(&mut buf);
+    converted
+}
